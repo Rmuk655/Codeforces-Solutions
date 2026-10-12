@@ -3,9 +3,9 @@
 #include <vector>
 #include <math.h>
 #include <algorithm>
- 
+ 
 using namespace std;
- 
+ 
 int main()
 {
     int t;
@@ -29,10 +29,10 @@ int main()
             cin >> x;
             a[x] = true;
         }
- 
+ 
         vector<vector<int>> pend(n + 1);
         vector<char> cnt(n + 1, 0);
- 
+ 
         for (int v = n; v >= 1; v--)
         {
             if (a[v])
@@ -60,7 +60,7 @@ int main()
                 pend[p[v]].push_back(v);
             }
         }
- 
+ 
         cout << ans.size() << " ";
         for (int x : ans)
         {

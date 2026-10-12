@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+ 
 using namespace std;
- 
+ 
 bool feasible(vector<int> &a, int mid, int n)
 {
     if (mid == 0)
@@ -16,37 +16,37 @@ bool feasible(vector<int> &a, int mid, int n)
     {
         if (++freq[a[i]] == 2)
             no++;
- 
+ 
         while (!mnq.empty() && a[mnq.back()] >= a[i])
             mnq.pop_back();
         mnq.push_back(i);
- 
+ 
         while (!mxq.empty() && a[mxq.back()] <= a[i])
             mxq.pop_back();
         mxq.push_back(i);
- 
+ 
         if (i >= mid)
         {
             int rem = a[i - mid];
- 
+ 
             if (freq[rem] == 2)
                 no--;
             freq[rem]--;
- 
+ 
             while (!mnq.empty() && mnq.front() <= i - mid)
                 mnq.pop_front();
- 
+ 
             while (!mxq.empty() && mxq.front() <= i - mid)
                 mxq.pop_front();
         }
- 
+ 
         if (i >= mid - 1)
         {
             int l = i - mid + 1;
- 
+ 
             int mnVal = a[mnq.front()];
             int mxVal = a[mxq.front()];
- 
+ 
             if (no == 0 && mxVal - mnVal + 1 == mid)
                 seg_min[l] = mnVal;
         }
@@ -60,9 +60,9 @@ bool feasible(vector<int> &a, int mid, int n)
         }
         if (seg_min[j] == -1)
             continue;
- 
+ 
         int m = seg_min[j];
- 
+ 
         if (m - mid >= 1 && seen[m - mid])
             return true;
         if (m + mid <= n && seen[m + mid])
@@ -70,7 +70,7 @@ bool feasible(vector<int> &a, int mid, int n)
     }
     return false;
 }
- 
+ 
 int main()
 {
     int t;

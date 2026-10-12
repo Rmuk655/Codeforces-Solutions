@@ -3,9 +3,9 @@
 #include <vector>
 #include <math.h>
 #include <algorithm>
- 
+ 
 using namespace std;
- 
+ 
 long long int sum(vector<long long int> temp){
     long long int ans = 0;
     for(long long int x : temp){
@@ -13,7 +13,7 @@ long long int sum(vector<long long int> temp){
     }
     return ans;
 }
- 
+ 
 int main()
 {
     int t;

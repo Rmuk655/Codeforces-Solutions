@@ -3,11 +3,11 @@
 #include <vector>
 #include <math.h>
 #include <algorithm>
- 
+ 
 long long MOD = 998244353;
- 
+ 
 using namespace std;
- 
+ 
 long long solve(string s, int st){
     int x = -1, j = 0;
     bool cond = true;
@@ -20,7 +20,7 @@ long long solve(string s, int st){
     if(!cond) return 0;
     return (x == -1) ? 2 : 1;
 }
- 
+ 
 int main()
 {
     int t;

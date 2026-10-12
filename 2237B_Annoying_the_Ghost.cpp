@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+ 
 using namespace std;
- 
+ 
 int main()
 {
     int t;
@@ -35,7 +35,7 @@ int main()
             cout << -1 << endl;
             continue;
         }
- 
+ 
         vector<int> pos(n);
         for (int j = 0; j < n; j++)
         {
@@ -48,10 +48,10 @@ int main()
                 }
             }
         }
- 
+ 
         vector<int> perm(n, -1);
         vector<bool> visited(n, false);
- 
+ 
         for (int j = 0; j < n; j++)
         {
             int best = -1;
@@ -68,9 +68,9 @@ int main()
             visited[best] = true;
             perm[best] = j;
         }
- 
+ 
         long long ans = 0;
- 
+ 
         for (int j = 0; j < n; j++)
         {
             for (int k = j + 1; k < n; k++)

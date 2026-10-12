@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+ 
 using namespace std;
- 
+ 
 int main()
 {
     int t;
@@ -18,7 +18,7 @@ int main()
             n -= take * cost;
             cost <<= 1;
         }
- 
+ 
         cout << ans << '\n';
     }
 }

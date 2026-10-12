@@ -3,9 +3,9 @@
 #include <vector>
 #include <math.h>
 #include <algorithm>
- 
+ 
 using namespace std;
- 
+ 
 int main()
 {
     int t;
@@ -32,7 +32,7 @@ int main()
             {
                 cnt_3++;
             }
- 
+ 
             if (cond && (cnt_1 - t_1) + (cnt_2 - t_2) >= (cnt_3 - t_3) && (cnt_1 + cnt_2 + cnt_3 < n))
             {
                 cond2 = true;

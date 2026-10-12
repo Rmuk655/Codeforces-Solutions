@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+ 
 using namespace std;
- 
+ 
 int main()
 {
     int t;
@@ -28,14 +28,14 @@ int main()
             }
         }
         int temp = mp.size(), sum = n;
- 
+ 
         for (int j = 0; temp > 0; j++)
         {
             if (((j + 1 > mx) || (mp2[j + 1] > 0)) && k >= sum && (k - sum) % temp == 0)
             {
                 ans++;
             }
- 
+ 
             sum -= temp;
             if (j + 1 <= mx)
             {

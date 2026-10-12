@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
- 
+ 
 using namespace std;
- 
+ 
 int main()
 {
     int t;
@@ -17,7 +17,7 @@ int main()
             cin >> x;
             a.push_back(x);
         }
- 
+ 
         for (int j = 0; j < n; j++)
         {
             long long int cur = a[j];
@@ -28,14 +28,14 @@ int main()
             }
             vec.push_back(cur);
         }
- 
+ 
         long long ans = 0;
- 
+ 
         for (auto v: vec)
         {
             ans = max(ans, v);
         }
- 
+ 
         cout << ans << endl;
     }
 }
